@@ -78,6 +78,9 @@ systemctl start wg-quick@wg0
 # Show QR config to display
 qrencode -t ansiutf8 < ./$USERNAME.conf
 
+# Store QR config in folder
+qrencode -o qr.png < ./$USERNAME.conf
+
 # Show config file
 echo "# Display $USERNAME.conf"
 cat ./$USERNAME.conf
